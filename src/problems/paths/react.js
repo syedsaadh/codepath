@@ -199,11 +199,11 @@ export const reactProblems = [
 
   // Event Handling
   {
-    slug: "form-events",
-    title: "Form Event Handling",
+    slug: "react-form-events",
+    title: "React Form Event Handling",
     difficulty: "beginner",
     category: "react",
-    topic: "Event Handling",
+    topic: "React Form Event Handling",
     description: `
       Create a registration form with proper event handling:
 

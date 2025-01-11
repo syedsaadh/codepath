@@ -136,7 +136,7 @@ export const learningPath = {
           "Props",
           "State Management",
           "Component Lifecycle",
-          "Event Handling",
+          "React Form Event Handling",
           "Conditional Rendering",
           "Lists and Keys",
         ],
