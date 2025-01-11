@@ -2,6 +2,11 @@
 
 A structured learning platform for mastering web development through guided paths and hands-on problem solving.
 
+## Live Site
+
+Visit the live site here: [Codepath on GitHub Pages](https://syedsaadh.github.io/codepath)
+
+
 ## What you will learn
 
 - JavaScript
