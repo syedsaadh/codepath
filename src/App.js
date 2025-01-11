@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme, Toolbar } from '@mui/material';
 import Navbar from './components/Navbar';
 import ProblemDetail from './components/ProblemDetail';
