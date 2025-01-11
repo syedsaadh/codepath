@@ -2,7 +2,7 @@
 
 A structured learning platform for mastering web development through guided paths and hands-on problem solving.
 
-## Stack
+## What you will learn
 
 - JavaScript
 - HTML
