@@ -15,8 +15,17 @@ function Navbar() {
       }}
     >
       <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          CodePath
+        <Typography
+          variant="h6"
+          component={Link}
+          to="/"
+          sx={{
+            flexGrow: 1,
+            color: "inherit",
+            textDecoration: "none",
+          }}
+        >
+          {"<"}CodePath{" />"}
         </Typography>
         <Button color="inherit" component={Link} to="/dashboard">
           Learning Dashboard
