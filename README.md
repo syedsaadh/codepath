@@ -2,6 +2,16 @@
 
 A structured learning platform for mastering web development through guided paths and hands-on problem solving.
 
+## Stack
+
+- JavaScript
+- HTML
+- CSS
+- Node.js
+- Express
+- NestJs
+- React
+
 ## Features
 
 - 📚 Structured learning paths for multiple technologies
