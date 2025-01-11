@@ -18,153 +18,148 @@ import {
   useTheme,
 } from "@mui/material";
 import { Link } from "react-router-dom";
-import { 
-  FaReact, 
-  FaNodeJs, 
-  FaGraduationCap, 
+import {
+  FaReact,
+  FaNodeJs,
+  FaGraduationCap,
   FaTools,
   FaRocket,
-  FaCode,
-  FaShoppingCart, 
-  FaUserCircle, 
-  FaComments, 
-  FaChartBar,
-  FaDatabase,
-  FaServer
-} from 'react-icons/fa';
-import { 
-  BiCodeAlt, 
-  BiData 
-} from 'react-icons/bi';
-import { 
-  SiExpress, 
-  SiNestjs, 
-  SiJavascript, 
-  SiHtml5, 
-  SiCss3 
-} from 'react-icons/si';
-import { 
-  MdSpeed, 
-  MdAutoAwesome 
-} from 'react-icons/md';
-import { 
-  BsLightningChargeFill 
-} from 'react-icons/bs';
+  FaFacebook,
+  FaInstagram,
+} from "react-icons/fa";
+import { BiCodeAlt, BiData } from "react-icons/bi";
+import {
+  SiExpress,
+  SiNestjs,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+  SiMysql,
+  SiMongodb,
+} from "react-icons/si";
+import { MdSpeed, MdAutoAwesome } from "react-icons/md";
+import { BsLightningChargeFill } from "react-icons/bs";
 import ParticleBackground from "./ParticleBackground";
+import { learningPath } from "../curriculum/learning-path";
 
 const technologies = [
   {
     name: "Frontend Development",
     icon: <FaReact size={48} />,
-    skills: ["HTML", "CSS", "JavaScript"],
+    skills: ["HTML", "CSS", "JavaScript", "React"],
     realWorldApps: [
-      { 
-        name: "Facebook", 
+      {
+        name: "Facebook",
         tech: "React",
-        icon: <FaReact size={24} />
+        icon: <FaFacebook size={24} />,
       },
-      { 
-        name: "Instagram", 
+      {
+        name: "Instagram",
         tech: "React",
-        icon: <FaReact size={24} />
+        icon: <FaInstagram size={24} />,
       },
-      { 
-        name: "Netflix", 
+      {
+        name: "Netflix",
         tech: "React",
-        icon: <FaReact size={24} />
-      }
+        icon: <FaReact size={24} />,
+      },
     ],
     skillIcons: {
-      "HTML": <SiHtml5 size={20} />,
-      "CSS": <SiCss3 size={20} />,
-      "JavaScript": <SiJavascript size={20} />
-    }
+      HTML: <SiHtml5 size={20} />,
+      CSS: <SiCss3 size={20} />,
+      JavaScript: <SiJavascript size={20} />,
+      React: <FaReact size={20} />,
+    },
   },
   {
     name: "Backend Development",
     icon: <FaNodeJs size={48} />,
-    skills: ["Node.js", "Express", "NestJS"],
+    skills: ["Node.js", "Express", "NestJS", "MySQL", "MongoDB"],
     realWorldApps: [
-      { 
-        name: "PayPal", 
+      {
+        name: "PayPal",
         tech: "Node.js",
-        icon: <FaNodeJs size={24} />
+        icon: <FaNodeJs size={24} />,
       },
-      { 
-        name: "LinkedIn", 
+      {
+        name: "LinkedIn",
         tech: "Express",
-        icon: <SiExpress size={24} />
+        icon: <SiExpress size={24} />,
       },
-      { 
-        name: "Adidas", 
+      {
+        name: "Adidas",
         tech: "NestJS",
-        icon: <SiNestjs size={24} />
-      }
+        icon: <SiNestjs size={24} />,
+      },
     ],
     skillIcons: {
       "Node.js": <FaNodeJs size={20} />,
-      "Express": <SiExpress size={20} />,
-      "NestJS": <SiNestjs size={20} />
-    }
-  }
+      Express: <SiExpress size={20} />,
+      NestJS: <SiNestjs size={20} />,
+      MySQL: <SiMysql size={20} />,
+      MongoDB: <SiMongodb size={20} />,
+    },
+  },
 ];
 
 const learningBenefits = [
   {
     title: "Structured Learning Path",
-    description: "Follow a carefully designed curriculum that builds your skills progressively",
-    icon: <FaGraduationCap size={40} />
+    description:
+      "Follow a carefully designed curriculum that builds your skills progressively",
+    icon: <FaGraduationCap size={40} />,
   },
   {
     title: "Hands-on Practice",
     description: "Solve real-world problems and build practical applications",
-    icon: <FaTools size={40} />
+    icon: <FaTools size={40} />,
   },
   {
     title: "Industry-Ready Skills",
     description: "Learn technologies used by top companies worldwide",
-    icon: <MdSpeed size={40} />
+    icon: <MdSpeed size={40} />,
   },
   {
     title: "Interactive Learning",
     description: "Get immediate feedback and track your progress",
-    icon: <MdAutoAwesome size={40} />
-  }
+    icon: <MdAutoAwesome size={40} />,
+  },
 ];
 
-const exampleComponents = [
+const WhatYouCanBuild = [
   {
-    title: "E-commerce Components",
-    description: "Shopping cart, product catalog, and payment processing",
-    frontend: ["React Components", "State Management", "API Integration"],
-    backend: ["REST APIs", "Database Models", "Payment Gateway"],
-    icon: <FaShoppingCart size={40} />,
-    preview: "Shopping cart with real-time updates and secure checkout"
+    title: "To-Do List App",
+    description: "Build a to-do list app with React and Firebase",
+    frontend: ["React"],
+    icon: <FaRocket size={40} />,
+    preview: "Create a to-do list app with React and Firebase",
   },
   {
-    title: "User Authentication",
-    description: "Secure login, registration, and profile management",
-    frontend: ["Auth Forms", "Protected Routes", "JWT Handling"],
-    backend: ["JWT Auth", "Password Hashing", "Session Management"],
-    icon: <FaUserCircle size={40} />,
-    preview: "Complete authentication flow with social login"
+    title: "Weather App",
+    description: "Build a weather app with React and OpenWeather API",
+    frontend: ["React"],
+    backend: ["OpenWeather API"],
+    icon: <FaRocket size={40} />,
+    preview: "Create a weather app with React and OpenWeather API",
   },
   {
-    title: "Real-time Chat",
-    description: "Live messaging system with notifications",
-    frontend: ["WebSocket Client", "Message UI", "Notifications"],
-    backend: ["WebSocket Server", "Message Queue", "Push Notifications"],
-    icon: <FaComments size={40} />,
-    preview: "Real-time chat with message history and typing indicators"
+    title: "Chat App with Firebase",
+    description: "Build a chat app with Firebase",
+    frontend: ["React"],
+    backend: ["Firebase"],
+    icon: <FaRocket size={40} />,
+    preview: "Create a chat app with Firebase",
   },
   {
-    title: "Analytics Dashboard",
-    description: "Data visualization and reporting interface",
-    frontend: ["Chart Components", "Data Grid", "Filters"],
-    backend: ["Data Aggregation", "Report Generation", "Caching"],
-    icon: <FaChartBar size={40} />,
-    preview: "Interactive dashboard with real-time data updates"
-  }
+    title: "Booking.com Like App",
+    description:
+      "Build a booking.com like app to book hotels. This app will mimic the popular features of Booking.com, focusing on user convenience and a seamless booking experience.",
+    frontend: ["React"],
+    backend: ["NestJS", "MySQL", "Node.js"],
+    icon: <FaRocket size={40} />,
+    preview:
+      "Create a booking.com like app with React, NestJS, MySQL, and Node.js",
+  },
 ];
 
 // Add animation variants
@@ -226,6 +221,9 @@ function AnimatedSection({ children, delay = 0 }) {
 function LandingPage() {
   const theme = useTheme();
 
+  // Filter to only include projects from the learning path
+  const projectComponents = WhatYouCanBuild;
+
   return (
     <Box sx={{ bgcolor: "background.default" }}>
       {/* Hero Section with Particles */}
@@ -241,13 +239,13 @@ function LandingPage() {
           pt: 0,
         }}
       >
-        <Container 
-          maxWidth="lg" 
-          sx={{ 
-            position: "relative", 
+        <Container
+          maxWidth="lg"
+          sx={{
+            position: "relative",
             zIndex: 2,
-            display: 'flex',
-            alignItems: 'center'
+            display: "flex",
+            alignItems: "center",
           }}
         >
           <Grid container spacing={8} alignItems="center">
@@ -262,7 +260,8 @@ function LandingPage() {
                   sx={{
                     fontWeight: 800,
                     fontSize: { xs: "3rem", md: "4.5rem" },
-                    background: "linear-gradient(45deg, #00bcd4 30%, #62efff 90%)",
+                    background:
+                      "linear-gradient(45deg, #00bcd4 30%, #62efff 90%)",
                     backgroundClip: "text",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
@@ -282,8 +281,8 @@ function LandingPage() {
                     fontWeight: 400,
                   }}
                 >
-                  Build modern web applications from scratch to deployment
-                  with our structured learning path and hands-on projects.
+                  Build modern web applications from scratch to deployment with
+                  our structured learning path and hands-on projects.
                 </Typography>
                 <motion.div
                   whileHover={{ scale: 1.02 }}
@@ -301,7 +300,7 @@ function LandingPage() {
                 </motion.div>
               </motion.div>
             </Grid>
-            <Grid item xs={12} md={6} sx={{ position: 'relative' }}>
+            <Grid item xs={12} md={6} sx={{ position: "relative" }}>
               {/* Empty grid for particle space */}
             </Grid>
           </Grid>
@@ -338,29 +337,40 @@ function LandingPage() {
                   <motion.div variants={scaleIn}>
                     <Card className="glass-morphism">
                       <CardContent>
-                        <Box sx={{ 
-                          display: 'flex', 
-                          alignItems: 'center', 
-                          justifyContent: 'center',
-                          mb: 3,
-                          position: 'relative'
-                        }}>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            mb: 3,
+                            position: "relative",
+                          }}
+                        >
                           {benefit.icon}
                           <Box
                             sx={{
-                              position: 'absolute',
-                              width: '100%',
-                              height: '100%',
+                              position: "absolute",
+                              width: "100%",
+                              height: "100%",
                               background: `radial-gradient(circle, ${theme.palette.primary.main}15 0%, transparent 70%)`,
                               opacity: 0.5,
-                              filter: 'blur(10px)',
+                              filter: "blur(10px)",
                             }}
                           />
                         </Box>
-                        <Typography variant="h6" gutterBottom color="text.primary" align="center">
+                        <Typography
+                          variant="h6"
+                          gutterBottom
+                          color="text.primary"
+                          align="center"
+                        >
                           {benefit.title}
                         </Typography>
-                        <Typography variant="body2" color="text.secondary" align="center">
+                        <Typography
+                          variant="body2"
+                          color="text.secondary"
+                          align="center"
+                        >
                           {benefit.description}
                         </Typography>
                       </CardContent>
@@ -388,30 +398,34 @@ function LandingPage() {
             {technologies.map((tech) => (
               <Grid item xs={12} md={6} key={tech.name}>
                 <Paper className="glass-morphism" sx={{ p: 4, height: "100%" }}>
-                  <Box sx={{ 
-                    display: "flex", 
-                    alignItems: "center", 
-                    mb: 3,
-                    position: 'relative'
-                  }}>
-                    <Box sx={{ 
-                      position: 'relative',
-                      p: 2,
-                      borderRadius: '50%',
-                      background: `linear-gradient(45deg, ${theme.palette.primary.main}20, ${theme.palette.primary.light}10)`,
-                      mr: 2
-                    }}>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      mb: 3,
+                      position: "relative",
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        position: "relative",
+                        p: 2,
+                        borderRadius: "50%",
+                        background: `linear-gradient(45deg, ${theme.palette.primary.main}20, ${theme.palette.primary.light}10)`,
+                        mr: 2,
+                      }}
+                    >
                       {tech.icon}
                       <Box
                         sx={{
-                          position: 'absolute',
+                          position: "absolute",
                           top: 0,
                           left: 0,
                           right: 0,
                           bottom: 0,
                           background: `radial-gradient(circle, ${theme.palette.primary.main}15 0%, transparent 70%)`,
-                          filter: 'blur(8px)',
-                          borderRadius: '50%',
+                          filter: "blur(8px)",
+                          borderRadius: "50%",
                         }}
                       />
                     </Box>
@@ -450,17 +464,18 @@ function LandingPage() {
                   <List dense>
                     {tech.realWorldApps.map((app) => (
                       <ListItem key={app.name}>
-                        <ListItemIcon 
-                          sx={{ 
+                        <ListItemIcon
+                          sx={{
                             minWidth: 36,
                             color: "primary.light",
-                            '& svg': {
-                              filter: 'drop-shadow(0 0 8px rgba(0, 188, 212, 0.3))',
-                              transition: 'transform 0.2s ease-in-out',
-                              '&:hover': {
-                                transform: 'scale(1.1)',
-                              }
-                            }
+                            "& svg": {
+                              filter:
+                                "drop-shadow(0 0 8px rgba(0, 188, 212, 0.3))",
+                              transition: "transform 0.2s ease-in-out",
+                              "&:hover": {
+                                transform: "scale(1.1)",
+                              },
+                            },
                           }}
                         >
                           {app.icon}
@@ -488,9 +503,9 @@ function LandingPage() {
             variant="h3"
             align="center"
             gutterBottom
-            sx={{ 
-              fontWeight: 800, 
-              mb: 8, 
+            sx={{
+              fontWeight: 800,
+              mb: 8,
               color: "text.primary",
               position: "relative",
               "&::after": {
@@ -503,32 +518,32 @@ function LandingPage() {
                 height: 4,
                 borderRadius: 2,
                 bgcolor: "primary.main",
-                background: `linear-gradient(90deg, ${theme.palette.primary.main}, ${theme.palette.primary.light})`
-              }
+                background: `linear-gradient(90deg, ${theme.palette.primary.main}, ${theme.palette.primary.light})`,
+              },
             }}
           >
-            What You Can Build
+            What You Will Build
           </Typography>
           <Grid container spacing={4}>
-            {exampleComponents.map((component) => (
+            {projectComponents.map((component) => (
               <Grid item xs={12} md={6} key={component.title}>
                 <motion.div
                   whileHover={{ y: -5 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Paper 
-                    className="glass-morphism" 
-                    sx={{ 
-                      p: 4, 
+                  <Paper
+                    className="glass-morphism"
+                    sx={{
+                      p: 4,
                       height: "100%",
                       display: "flex",
                       flexDirection: "column",
                       position: "relative",
-                      overflow: "hidden"
+                      overflow: "hidden",
                     }}
                   >
-                    <Box 
-                      sx={{ 
+                    <Box
+                      sx={{
                         position: "absolute",
                         top: 0,
                         right: 0,
@@ -536,13 +551,13 @@ function LandingPage() {
                         opacity: 0.1,
                         transform: "rotate(15deg) translate(20%, -20%)",
                         "& svg": {
-                          fontSize: 100
-                        }
+                          fontSize: 100,
+                        },
                       }}
                     >
                       {component.icon}
                     </Box>
-                    
+
                     <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
                       <Box sx={{ mr: 2, color: "primary.main" }}>
                         {component.icon}
@@ -552,58 +567,51 @@ function LandingPage() {
                       </Typography>
                     </Box>
 
-                    <Typography 
-                      variant="body1" 
-                      sx={{ 
+                    <Typography
+                      variant="body1"
+                      sx={{
                         mb: 3,
-                        color: "text.secondary"
+                        color: "text.secondary",
                       }}
                     >
                       {component.description}
                     </Typography>
 
                     <Grid container spacing={2} sx={{ mb: 3 }}>
-                      <Grid item xs={6}>
-                        <Box sx={{ 
-                          p: 2, 
-                          bgcolor: "background.default",
-                          borderRadius: 1,
-                          height: "100%"
-                        }}>
-                          <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
-                            <FaReact size={16} style={{ marginRight: 8 }} />
-                            <Typography variant="subtitle2" color="primary">
-                              Frontend
-                            </Typography>
-                          </Box>
+                      <Grid item xs={12}>
+                        <Box
+                          sx={{
+                            p: 2,
+                            bgcolor: "background.default",
+                            borderRadius: 1,
+                            height: "100%",
+                          }}
+                        >
+                          <Typography variant="subtitle2" color="primary">
+                            Frontend
+                          </Typography>
                           <List dense>
-                            {component.frontend.map((item, index) => (
+                            {component?.frontend?.map((item, index) => (
                               <ListItem key={index} sx={{ py: 0 }}>
-                                <Typography variant="body2" color="text.secondary">
+                                <Typography
+                                  variant="body2"
+                                  color="text.secondary"
+                                >
                                   • {item}
                                 </Typography>
                               </ListItem>
                             ))}
                           </List>
-                        </Box>
-                      </Grid>
-                      <Grid item xs={6}>
-                        <Box sx={{ 
-                          p: 2, 
-                          bgcolor: "background.default",
-                          borderRadius: 1,
-                          height: "100%"
-                        }}>
-                          <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
-                            <FaNodeJs size={16} style={{ marginRight: 8 }} />
-                            <Typography variant="subtitle2" color="primary">
-                              Backend
-                            </Typography>
-                          </Box>
+                          <Typography variant="subtitle2" color="primary">
+                            Backend
+                          </Typography>
                           <List dense>
-                            {component.backend.map((item, index) => (
+                            {component.backend?.map((item, index) => (
                               <ListItem key={index} sx={{ py: 0 }}>
-                                <Typography variant="body2" color="text.secondary">
+                                <Typography
+                                  variant="body2"
+                                  color="text.secondary"
+                                >
                                   • {item}
                                 </Typography>
                               </ListItem>
@@ -613,21 +621,21 @@ function LandingPage() {
                       </Grid>
                     </Grid>
 
-                    <Box 
-                      sx={{ 
+                    <Box
+                      sx={{
                         mt: "auto",
                         pt: 2,
                         borderTop: 1,
-                        borderColor: "divider"
+                        borderColor: "divider",
                       }}
                     >
-                      <Typography 
-                        variant="body2" 
+                      <Typography
+                        variant="body2"
                         color="text.secondary"
-                        sx={{ 
+                        sx={{
                           display: "flex",
                           alignItems: "center",
-                          gap: 1
+                          gap: 1,
                         }}
                       >
                         <BsLightningChargeFill />
@@ -658,7 +666,12 @@ function LandingPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <Typography variant="h3" align="center" gutterBottom fontWeight="bold">
+            <Typography
+              variant="h3"
+              align="center"
+              gutterBottom
+              fontWeight="bold"
+            >
               Ready to Start Your Journey?
             </Typography>
             <Typography

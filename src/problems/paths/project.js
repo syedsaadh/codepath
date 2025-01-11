@@ -98,7 +98,7 @@ export const projectProblems = [
   },
   {
     slug: "booking-app",
-    title: "Booking.com-like App",
+    title: "Booking.com Like App",
     difficulty: "advanced",
     category: "project",
     topic: "Travel and Accommodation Booking",
